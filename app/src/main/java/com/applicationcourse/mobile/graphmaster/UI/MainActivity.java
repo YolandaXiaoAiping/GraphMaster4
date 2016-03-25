@@ -4,12 +4,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.andexert.library.RippleView;
 import com.applicationcourse.mobile.graphmaster.Database.DatabaseHandler;
 import com.applicationcourse.mobile.graphmaster.Database.MainQues;
 import com.applicationcourse.mobile.graphmaster.Database.MainQuesHData;
@@ -17,6 +17,8 @@ import com.applicationcourse.mobile.graphmaster.Database.MainQuesHeading;
 import com.applicationcourse.mobile.graphmaster.Database.Options;
 import com.applicationcourse.mobile.graphmaster.Database.SubQuestion;
 import com.applicationcourse.mobile.graphmaster.R;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidviewhover.BlurLayout;
 
 import java.util.List;
 
@@ -26,6 +28,8 @@ import java.util.List;
 public class MainActivity extends Activity {
     private DatabaseHandler databaseHandler;
     private static Context mContext = null;
+    private BlurLayout mSampleLayout, mSampleLayout2, mSampleLayout3, mSampleLayout4;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,86 +38,88 @@ public class MainActivity extends Activity {
         //initialization
         databaseHandler = DatabaseHandler.getHandler(mContext);
         DatabaseHandler.deleteDatabase();
+        BlurLayout.setGlobalDefaultDuration(450);
 
-        final RippleView rippleView = (RippleView)findViewById(R.id.level1);
-        final RippleView rippleView2 = (RippleView)findViewById(R.id.level2);
-        final RippleView rippleView3 = (RippleView)findViewById(R.id.level3);
-        final RippleView rippleView4 = (RippleView)findViewById(R.id.level4);
+        mSampleLayout = (BlurLayout)findViewById(R.id.level1);
+        View hover = LayoutInflater.from(mContext).inflate(R.layout.hover_sample,null);
+        hover.findViewById(R.id.avatar1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "go to level 1 questions", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, DrawGraphActivity.class);
+                //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+        mSampleLayout.setHoverView(hover);
+        mSampleLayout.setBlurDuration(550);
 
+        mSampleLayout.addChildAppearAnimator(hover, R.id.description1, Techniques.FadeInUp);
+        mSampleLayout.addChildDisappearAnimator(hover, R.id.description1, Techniques.FadeOutDown);
+        mSampleLayout.addChildAppearAnimator(hover, R.id.avatar1, Techniques.DropOut, 1200);
+        mSampleLayout.addChildDisappearAnimator(hover, R.id.avatar1, Techniques.FadeOutUp);
+        mSampleLayout.setBlurDuration(1000);
 
-        rippleView.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+        //sample2
+        mSampleLayout2 = (BlurLayout)findViewById(R.id.level2);
+        View hover2 = LayoutInflater.from(mContext).inflate(R.layout.hover_sample2, null);
+        hover2.findViewById(R.id.avatar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "Then go to level 2 questions.", Toast.LENGTH_SHORT).show();
+                List<MainQues> list = DatabaseHandler.getAllMainQVal("Create", "Line", 1);
+            }
+        });
+        mSampleLayout2.setHoverView(hover2);
 
-                    }
-                }
-        );
-        rippleView.setOnRippleCompleteListener(
-                new RippleView.OnRippleCompleteListener() {
-                    @Override
-                    public void onComplete(RippleView rippleView) {
+        mSampleLayout2.addChildAppearAnimator(hover2, R.id.description, Techniques.FadeInUp);
+        mSampleLayout2.addChildDisappearAnimator(hover2, R.id.description, Techniques.FadeOutDown);
+        mSampleLayout2.addChildAppearAnimator(hover2, R.id.avatar, Techniques.DropOut, 1200);
+        mSampleLayout2.addChildDisappearAnimator(hover2, R.id.avatar, Techniques.FadeOutUp);
+        mSampleLayout2.setBlurDuration(1000);
 
-                        Intent intent = new Intent(MainActivity.this, DrawGraphActivity.class);
-                        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent);
-                    }
-                }
-        );
+        //sample3
+        mSampleLayout3 = (BlurLayout)findViewById(R.id.level3);
+        View hover3 = LayoutInflater.from(mContext).inflate(R.layout.hover_sample3, null);
+        hover3.findViewById(R.id.avatar3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "Then go to level 3 questions.", Toast.LENGTH_SHORT).show();
+            }
+        });
+        mSampleLayout3.setHoverView(hover3);
 
-        rippleView2.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+        mSampleLayout3.addChildAppearAnimator(hover3, R.id.description3, Techniques.FadeInUp);
+        mSampleLayout3.addChildDisappearAnimator(hover3, R.id.description3, Techniques.FadeOutDown);
+        mSampleLayout3.addChildAppearAnimator(hover3, R.id.avatar3, Techniques.DropOut, 1200);
+        mSampleLayout3.addChildDisappearAnimator(hover3, R.id.avatar3, Techniques.FadeOutUp);
+        mSampleLayout3.enableZoomBackground(true);
+        mSampleLayout3.setBlurDuration(1200);
 
-                    }
-                }
-        );
-        rippleView2.setOnRippleCompleteListener(
-                new RippleView.OnRippleCompleteListener() {
-                    @Override
-                    public void onComplete(RippleView rippleView) {
-                        List<MainQues> list = DatabaseHandler.getAllMainQVal("Create", "Line", 1);
-                    }
-                }
-        );
+        //sample 4
 
-        rippleView3.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+        mSampleLayout4 = (BlurLayout)findViewById(R.id.level4);
+        View hover4 = LayoutInflater.from(mContext).inflate(R.layout.hover_sample4,null);
+        hover4.findViewById(R.id.avatar4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "Then go to level 4 questions.", Toast.LENGTH_SHORT).show();
+            }
+        });
+        mSampleLayout4.setHoverView(hover4);
 
-                    }
-                }
-        );
-        rippleView3.setOnRippleCompleteListener(
-                new RippleView.OnRippleCompleteListener() {
-                    @Override
-                    public void onComplete(RippleView rippleView) {
-                        Toast.makeText(getApplicationContext(), "Not yet implemented", Toast.LENGTH_SHORT).show();
-                    }
-                }
-        );
+        mSampleLayout4.addChildAppearAnimator(hover4, R.id.description4, Techniques.FadeInUp);
+        mSampleLayout4.addChildDisappearAnimator(hover4, R.id.description4, Techniques.FadeOutDown);
+        mSampleLayout4.addChildAppearAnimator(hover4, R.id.avatar4, Techniques.DropOut, 1200);
+        mSampleLayout4.addChildDisappearAnimator(hover4, R.id.avatar4, Techniques.FadeOutUp);
+        mSampleLayout4.enableZoomBackground(true);
+        mSampleLayout4.setBlurDuration(1200);
 
-        rippleView4.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                    }
-                }
-        );
-        rippleView4.setOnRippleCompleteListener(
-                new RippleView.OnRippleCompleteListener() {
-                    @Override
-                    public void onComplete(RippleView rippleView) {
-                          }
-                }
-        );
 
 
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 // Inflate the menu; this adds items to the action bar if it is present.
