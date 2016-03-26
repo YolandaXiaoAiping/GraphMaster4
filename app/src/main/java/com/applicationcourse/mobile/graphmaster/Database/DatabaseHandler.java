@@ -1059,10 +1059,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     cursor.moveToFirst();
                 score = Float.parseFloat(cursor.getString(0));
                 //10% mistake
-                float lessMistake = (float)(total);
                 float mediumMistake = (float)(.15 *total);
                 float moreMistake = (float)(.60 *total);
-                if ((score) == lessMistake) {
+                if (score == 0) {
                     db.close();
                     return "promoteLevel";
                 }else if((score) <= mediumMistake) {
