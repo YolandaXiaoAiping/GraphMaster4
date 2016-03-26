@@ -146,12 +146,14 @@
                 android:stretchColumns="1,2">
             </TableLayout>
 
-            <TextView
-                android:id="@+id/txtSubQues"
+            <WebView
+                android:id="@+id/webSubQues"
                 android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:layout_height="wrap_content"
-                android:text="Sub Question Here?"
+                android:paddingTop="16dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_below="@id/webMainQues"/>
             <LinearLayout

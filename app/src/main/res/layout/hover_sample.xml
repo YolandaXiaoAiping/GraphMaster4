@@ -9,7 +9,7 @@
         android:layout_width="55dip"
         android:layout_height="55dp"
         android:id="@+id/avatar1"
-        android:src="@drawable/daimajia"
+        android:src="@drawable/image1"
         android:scaleType="centerCrop"
         app:corner_radius="10dip"
         app:border_width="1dp"
