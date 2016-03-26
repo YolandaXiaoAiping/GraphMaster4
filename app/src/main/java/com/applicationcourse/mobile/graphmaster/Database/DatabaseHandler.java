@@ -2947,18 +2947,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String Option841 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
                 "'8'," +
                 "'4'," +
-                "'3.5'," +
+                "'3'," +
                 "'T'," +
                 "'Great job! You’re correct.')";
         database.execSQL(Option841);
-
-        String Option842 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
-                "'8'," +
-                "'4'," +
-                "'4'," +
-                "'T'," +
-                "'Great job! You’re correct.')";
-        database.execSQL(Option842);
 
         String Option843 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
                 "'8'," +
@@ -2973,7 +2965,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String Option851 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
                 "'8'," +
                 "'5'," +
-                "'2'," +
+                "'1'," +
                 "'T'," +
                 "'Great job! You’re correct.')";
         database.execSQL(Option851);
@@ -3503,7 +3495,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "'8'," +
                 "'15'," +
                 "'1'," +
-                "'7'"+
+                "'6'"+
                 ")";
         database.execSQL(Data8151);
 
@@ -3543,7 +3535,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "'8'," +
                 "'16'," +
                 "'1'," +
-                "'5'"+
+                "'4'"+
                 ")";
         database.execSQL(Data8161);
 

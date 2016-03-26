@@ -39,8 +39,8 @@
       <file leaf-file-name="DatabaseHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/applicationcourse/mobile/graphmaster/Database/DatabaseHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46153846">
-              <caret line="1063" column="33" selection-start-line="1063" selection-start-column="33" selection-end-line="1063" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.102564104">
+              <caret line="3551" column="25" selection-start-line="3551" selection-start-column="25" selection-end-line="3551" selection-end-column="25" />
               <folding>
                 <element signature="e#20162#20172#0" expanded="true" />
               </folding>
@@ -2883,8 +2883,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/applicationcourse/mobile/graphmaster/Database/DatabaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46153846">
-          <caret line="1063" column="33" selection-start-line="1063" selection-start-column="33" selection-end-line="1063" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.102564104">
+          <caret line="3551" column="25" selection-start-line="3551" selection-start-column="25" selection-end-line="3551" selection-end-column="25" />
           <folding>
             <element signature="e#20162#20172#0" expanded="true" />
           </folding>
