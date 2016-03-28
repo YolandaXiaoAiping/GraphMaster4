@@ -4721,48 +4721,184 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return help;
     }
     public void insertHelp(SQLiteDatabase database) {
-        String Video11 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
-                "'1'," +
+        String Video31 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
                 "'1'," +
                 "'video'," +
-                "'https://youtu.be/liFLl3Eh_HU'," +
+                "'https://www.youtube.com/watch?v=Yx9ETph_5F0'," +
                 "'none'" +
                 ")";
-        database.execSQL(Video11);
+        database.execSQL(Video31);
 
-        String Text11 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
-                "'1'," +
+        String Video32 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'2'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=4_CkeS0A8T4'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video32);
+
+        String Video33 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'3'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video33);
+
+        String Video34 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'4'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video34);
+
+        String Video35 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'5'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video35);
+
+        String Video36 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'6'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video36);
+
+        String Video37 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'7'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video37);
+
+        String Video38 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'8'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video38);
+
+
+        String Text31 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
                 "'1'," +
                 "'text'," +
-                "'To find your independent variable you " +
-                "need to start by finding what two things " +
-                "you are comparing in this question. " +
-                "Here you are comparing how many snails " +
-                "cross the finish line with how many snails " +
-                "start. " +
-                "Variable 1: Number of Snails Who Finish " +
-                "the Race in 1 Minute " +
-                "Variable 2: Number of Snails Who Start the " +
-                "Race " +
-                "Now ask yourself which variable depends " +
-                "on the other. " +
-                "Does Variable 1 depend on Variable 2 " +
-                "OR" +
-                "Does Variable 2 depend on Variable 1 " +
-                "Here the number of snails who finish the race in 1 minute depends on the number of " +
-                "snails who start the race. " +
-                "So the number of snails who finish the race " +
-                "in 1 minute is the dependent variable as it " +
-                "depends on the other variable. " +
-                "The other variable, the number of snails " +
-                "who starts the race, is the independent " +
-                "variable. '," +
+                "'Write down the two things you are comparing in the experiment." +
+                "In this case you are comparing the amount of water in the lake and the number of elephants that come to visit the lake per day." +
+                "Ask yourself which variable depends, or is affected by, the other." +
+                "Based on what the scientists think may be happening, the number of elephants depends on the amount of water in the lake." +
+                "This makes the number of elephants that come to the lake to visit per day the dependent variable.  The amount of water in the lake is then the independent variable.\n'," +
                 "'none'" +
                 ")";
-        database.execSQL(Text11);
+        database.execSQL(Text31);
 
-        Bitmap image11 = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.first);
-        insertImage(1, 1, image11, database);
+        String Text32 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'2'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text32);
+
+        String Text33 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'3'," +
+                "'text'," +
+                "'When labelling your axes you want to concisely put the variable on the axes." +
+                "The independent variable is placed on the x-axis, the dependent variable on the y-axis." +
+                "In this case our x-axis is that Amount of Water in Lake (cm)" +
+                "Notice that we have capitalized key words and placed our units in brackets." +
+                "The dependent variable is Number of Elephants Who Visit the Lake Per Day.  Again, key words are capitalized.  Because there are no units, none have been added in brackets.'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text33);
+
+
+        String Text34 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'4'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text34);
+
+
+        String Text35 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'5'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text35);
+
+
+        String Text36 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'6'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text36);
+
+
+        String Text37 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'7'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text37);
+
+
+        String Text38 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'8'," +
+                "'8'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text38);
+
+
+        Bitmap image31 = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.img1);
+        insertImage(8, 1, image31, database);
+
+        Bitmap image32 = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.img2);
+        insertImage(8, 2, image32, database);
+
+        Bitmap image33 = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.img3);
+        insertImage(8, 3, image33, database);
+        insertImage(8, 4, image33, database);
+        insertImage(8, 5, image33, database);
+        insertImage(8, 6, image33, database);
+        insertImage(8, 7, image33, database);
+        insertImage(8, 8, image33, database);
 
         //Help2
 
