@@ -42,9 +42,12 @@ public class LevelActivity extends Activity {
         hover.findViewById(R.id.avatar1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "go to level 1 questions", Toast.LENGTH_SHORT).show();
+                int grade=1;
+                Toast.makeText(mContext, "Starting Level 1 questions", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(LevelActivity.this, DrawGraphActivity.class);
-                //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                Bundle bundle = new Bundle();
+                bundle.putInt("grade", grade);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
@@ -64,8 +67,13 @@ public class LevelActivity extends Activity {
         hover2.findViewById(R.id.avatar).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "Then go to level 2 questions.", Toast.LENGTH_SHORT).show();
-                List<MainQues> list = DatabaseHandler.getAllMainQVal("Create", "Line", 1);
+                int grade=2;
+                Toast.makeText(mContext, "Starting Level 2 questions", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LevelActivity.this, DrawGraphActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("grade", grade);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
         mSampleLayout2.setHoverView(hover2);
@@ -83,8 +91,13 @@ public class LevelActivity extends Activity {
         hover3.findViewById(R.id.avatar3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "Then go to level 3 questions.", Toast.LENGTH_SHORT).show();
-            }
+                int grade=3;
+                Toast.makeText(mContext, "Starting Level 3 questions", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LevelActivity.this, DrawGraphActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("grade", grade);
+                intent.putExtras(bundle);
+                startActivity(intent);            }
         });
         mSampleLayout3.setHoverView(hover3);
 
@@ -102,7 +115,13 @@ public class LevelActivity extends Activity {
         hover4.findViewById(R.id.avatar4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "Then go to level 4 questions.", Toast.LENGTH_SHORT).show();
+                int grade=4;
+                Toast.makeText(mContext, "Starting Level 4 questions", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LevelActivity.this, DrawGraphActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("grade", grade);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
         mSampleLayout4.setHoverView(hover4);

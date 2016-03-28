@@ -1059,17 +1059,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     cursor.moveToFirst();
                 score = Float.parseFloat(cursor.getString(0));
                 //10% mistake
-                float mediumMistake = (float)(.15 *total);
+                float mediumMistake = (float)(.2 *total);
                 float moreMistake = (float)(.60 *total);
+                db.close();
                 if (score == 0) {
-                    db.close();
                     return "promoteLevel";
-                }else if((score) <= mediumMistake) {
-                    db.close();
-                    return "continueSmeLevel";
+                }else if((score) < mediumMistake) {
+                    return "nextLevel";
                 } else if((score) >= moreMistake) {
-                    db.close();
                     return "lowerLevel";
+                }else{
+                    return "continueSmeLevel";
                 }
             }
             //If greater than time threshold and 75% mistake it will return lowerLevel, else return continue same Level
@@ -1082,20 +1082,22 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 if (cursor != null)
                     cursor.moveToFirst();
                 score = Float.parseFloat(cursor.getString(0));
-                //75% mistake
-                float mediumMistake = (float)(.15 *total);
+                float mediumMistake = (float)(.2 *total);
                 float moreMistake = (float)(.60 *total);
-                if((score) <= mediumMistake) {
-                    db.close();
-                    return "continueSmeLevel";
-                } else if((score) >= moreMistake) {
+                db.close();
+                if(score < mediumMistake) {
+                    return "nextLevel";
+                } else if((score) > moreMistake) {
                     db.close();
                     return "lowerLevel";
+                }else{
+                    return "continueSmeLevel";
                 }
             }
         }
         return "continueSmeLevel";
     }
+
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////Count///////////////////////////////////////////////////////////////////////////

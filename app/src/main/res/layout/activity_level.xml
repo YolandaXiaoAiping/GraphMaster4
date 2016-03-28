@@ -25,7 +25,7 @@ xmlns:tools="http://schemas.android.com/tools">
             android:id="@+id/level5Image"
             android:layout_centerInParent="true"
             android:scaleType="fitXY"
-            android:src="@drawable/learntograph"
+            android:src="@drawable/learn"
             android:layout_width="match_parent"
             android:layout_height="140dp" />
     </com.daimajia.androidviewhover.BlurLayout>
