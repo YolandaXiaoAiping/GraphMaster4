@@ -55,6 +55,7 @@ public class LevelActivity extends Activity {
         mSampleLayout.addChildDisappearAnimator(hover, R.id.description1, Techniques.FadeOutDown);
         mSampleLayout.addChildAppearAnimator(hover, R.id.avatar1, Techniques.DropOut, 1200);
         mSampleLayout.addChildDisappearAnimator(hover, R.id.avatar1, Techniques.FadeOutUp);
+        mSampleLayout.enableZoomBackground(true);
         mSampleLayout.setBlurDuration(1000);
 
         //sample2
@@ -73,6 +74,7 @@ public class LevelActivity extends Activity {
         mSampleLayout2.addChildDisappearAnimator(hover2, R.id.description, Techniques.FadeOutDown);
         mSampleLayout2.addChildAppearAnimator(hover2, R.id.avatar, Techniques.DropOut, 1200);
         mSampleLayout2.addChildDisappearAnimator(hover2, R.id.avatar, Techniques.FadeOutUp);
+        mSampleLayout2.enableZoomBackground(true);
         mSampleLayout2.setBlurDuration(1000);
 
         //sample3
@@ -129,6 +131,7 @@ public class LevelActivity extends Activity {
         mSampleLayout5.addChildDisappearAnimator(hover5, R.id.description5, Techniques.FadeOutDown);
         mSampleLayout5.addChildAppearAnimator(hover5, R.id.avatar5, Techniques.DropOut, 1200);
         mSampleLayout5.addChildDisappearAnimator(hover5, R.id.avatar5, Techniques.FadeOutUp);
+        mSampleLayout5.enableZoomBackground(true);
         mSampleLayout5.setBlurDuration(1000);
 
 

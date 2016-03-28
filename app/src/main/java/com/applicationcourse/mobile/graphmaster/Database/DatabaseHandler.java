@@ -2876,7 +2876,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void insertLevel3(SQLiteDatabase database){
         ////MainQ//////
         String MainQ8 = "INSERT INTO "+TABLE_ENTRIES+ " ("+ COLUMN_QUESTION+","+COLUMN_TYPE+","+COLUMN_FUNCTION+","+COLUMN_GRADE +") VALUES(" +
-                "'Level 3 Kerry and Kenda are thinking about the elephants that come to a local watering hole to bathe and drink.  Lately the watering hole has received little rain and the water level is low. They hypothesize that the lower the water level, the less elephants will come there to drink, believing that the elephants will go to another watering hole where there is more water.  They conduct a series of experiments over the course of three years to determine if the level of the water does in fact impact how many elephants visit the watering hole. '," +
+                "'Scientists wonder if the level of water in the local lake impacts how many elephants visit it to drink. '," +
                 "'Line'," +
                 "'Create'," +
                 "'3')";
@@ -2903,17 +2903,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String Option811 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
                 "'8'," +
                 "'1'," +
-                "'Amount of Water in the Watering Hole (cm)'," +
+                "'Amount of Water in the Lake (cm)'," +
                 "'T'," +
-                "'Correct!Great job!')";
+                "'Correct! Great job!')";
         database.execSQL(Option811);
 
         String Option812 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
                 "'8'," +
                 "'1'," +
-                "'Number of elephants who visit the Watering Hole per day'," +
+                "'Number of Elephants who Visit the Lake per day'," +
                 "'F'," +
-                "'Oops.  That’s incorrect. The amount of water in the watering hole does not depend on the number of elephants who visit the watering hole per day.  It is the independent variable.  The number of elephants who visit per day depends on the amount of water in the watering hole, so it is the dependent variable.')";
+                "'Oops.  That’s incorrect. The amount of water in the lake does not depend on the number of elephants who visit it per day.  It is the independent variable.  The number of elephants who visit per day depends on the amount of water in the lake, so it is the dependent variable.')";
         database.execSQL(Option812);
 
         String Option821 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
@@ -2937,10 +2937,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "'3'," +
                 "'none'," +
                 "'T'," +
-                "'The answer we had was:X-Axis:" +
-                "Amount of Water in the Watering Hole (cm)\n"+
+                "'The answer we had was:\nX-Axis:" +
+                "Amount of Water in the Lake (cm)\n"+
                 "Y-Axis:" +
-                "Number of Elephants who Visit the Watering Hole per Day\n" +
+                "Number of Elephants who Visit the Lake per Day\n" +
                 ".Do your axes labels look similar?  Have you capitalized key words?  Have you placed units in brackets after the axes label?  Have you placed arrows at the end of each axis? Take a moment to correct your axes labels if you think changes need to be made.')";
         database.execSQL(Option831);
 
@@ -2957,9 +2957,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "'4'," +
                 "'-1'," +
                 "'F'," +
-                "'Oops.  That is incorrect.  Look at your table and find the highest number for the independent variable/x-axis/Amount of water in the watering hole.  The highest number is 21." +
-                "Now count the number of boxes on your graph.  You have 8 boxes.  Subtract 2 from this number.  This is your number of available boxes." +
-                "Divide your highest number (21) by the number of available boxes (6).  21÷6=3.5.  You can choose to use 3.5 as your interval or round it to 4.')";
+                "'Oops.  That is incorrect.  \nLook at your table and find the highest number for the independent variable/x-axis/Amount of water in the lake.  \nThe highest number is 18." +
+                "\nNow count the number of boxes on your graph.  You have 8 boxes.  Subtract 2 from this number.  This is your number of available boxes." +
+                "\nDivide your highest number (18) by the number of available boxes (6).  \n18÷6=3.')";
         database.execSQL(Option843);
 
         String Option851 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
@@ -2975,9 +2975,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "'5'," +
                 "'-1'," +
                 "'F'," +
-                "'Oops.  That is incorrect.  Look at your table and find the highest number for the dependent variable/y-axis/number of elephants who visit the watering hole per day.  The highest number is 7." +
-                "Now count the number of boxes on your graph.  You have 8 boxes.  Subtract 2 from this number.  This is your number of available boxes." +
-                "Divide your highest number (7) by the number of available boxes (6).  7÷6=1.16. You round this to 2 (note, 1.5 would be a possible contender, but you can’t have 1.5 elephants).')";
+                "'Oops.  That is incorrect.  \nLook at your table and find the highest number for the dependent variable/y-axis/number of elephants who visit the lake per day.  The highest number is 6." +
+                "\nNow count the number of boxes on your graph.  You have 8 boxes.  Subtract 2 from this number.  This is your number of available boxes." +
+                "\nDivide your highest number (6) by the number of available boxes (6).  6÷6=1.')";
         database.execSQL(Option852);
 
         String Option861 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
@@ -2985,10 +2985,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "'6'," +
                 "'none'," +
                 "'T'," +
-                "'Titles can be tricky to write.  Check your title against the one we wrote for this question Graph A: Number of Elephants who Visit the Watering Hole per Day by the Amount of Water in the Watering Hole (cm)." +
-                "Did your title begin “Graph A:”?" +
-                "Are key words capitalized?  Have you included the units in brackets?" +
-                "Have you told the reader of your graph exactly what the graph is about?')";
+                "'Titles can be tricky to write.  \nCheck your title against the one we wrote for this question \nGraph A: Number of Elephants who Visit the Lake per Day by the Amount of Water in the Lake (cm)." +
+                "\nDid your title begin “Graph A:”?" +
+                "\nAre key words capitalized?  \nHave you included the units in brackets?" +
+                "\nHave you told the reader of your graph exactly what the graph is about?')";
         database.execSQL(Option861);
 
         String Option871 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
@@ -2996,13 +2996,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "'7'," +
                 "'none'," +
                 "'T'," +
-                "'Oops!  It seems like your point doesn’t belong here.  Remember to use your table to create an (x,y) point.  The x value comes from the independent variable (in this case the amount of water (cm) in the watering hole) and the y value from the dependent variable (in this case the number of elephants who visit the watering hole per day). So your first point would be (7,5).')";
+                "'Oops!  It seems like your point doesn’t belong here.  \nRemember to use your table to create an (x,y) point.  The x value comes from the independent variable (in this case the amount of water (cm) in the lake) and the y value from the dependent variable (in this case the number of elephants who visit the lake per day). \nSo your first point would be (6,4).')";
         database.execSQL(Option871);
 
         String Option881 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
                 "'8'," +
                 "'8'," +
-                "'Based on the graph the higher the water level the more elephants come to the watering hole'," +
+                "'Based on the graph the higher the water level the more elephants come to the lake'," +
                 "'F'," +
                 "'Incorrect!')";
         database.execSQL(Option881);
@@ -3010,7 +3010,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String Option882 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
                 "'8'," +
                 "'8'," +
-                "'Based on the graph the lower the water level the more elephants will come to the watering hole.'," +
+                "'Based on the graph the lower the water level the more elephants will come to the lake.'," +
                 "'F'," +
                 "'Incorrect!')";
         database.execSQL(Option882);
@@ -3018,7 +3018,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String Option883 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
                 "'8'," +
                 "'8'," +
-                "'Based on the graph there is no relationship between how high the water level is in the watering hole and the number of elephants that will visit.'," +
+                "'Based on the graph there is no relationship between how high the water level is in the lake and the number of elephants that will visit.'," +
                 "'T'," +
                 "'Correct!')";
         database.execSQL(Option883);
@@ -3436,14 +3436,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String heading15 =  "INSERT INTO "+TABLE_HEADING_NAME+ " ("+ COLUMN_MAINQH_ID+","+COLUMN_HEADING_AXIS+","+COLUMN_HEADING+") VALUES(" +
                 "'8'," +
                 "'x'," +
-                "'Amount of Water in Watering Hole (cm)'" +
+                "'Amount of Water in Lake (cm)'" +
                 ")";
         database.execSQL(heading15);
 
         String heading16 =  "INSERT INTO "+TABLE_HEADING_NAME+ " ("+ COLUMN_MAINQH_ID+","+COLUMN_HEADING_AXIS+","+COLUMN_HEADING+") VALUES(" +
                 "'8'," +
                 "'y'," +
-                "'Number of Elephants who Visit the Watering Hole per Day'" +
+                "'Number of Elephants who Visit the Lake per Day'" +
                 ")";
         database.execSQL(heading16);
 
@@ -3523,14 +3523,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 ")";
         database.execSQL(Data8154);
 
-        String Data8155 =  "INSERT INTO "+TABLE_HDATA_NAME + " ("+ COLUMN_MAIND_ID+","+COLUMN_HEADINGD_ID+","+COLUMN_ORDER+","+COLUMN_DATA+") VALUES(" +
-                "'8'," +
-                "'15'," +
-                "'5'," +
-                "'21'"+
-                ")";
-        database.execSQL(Data8155);
-
         String Data8161 =  "INSERT INTO "+TABLE_HDATA_NAME + " ("+ COLUMN_MAIND_ID+","+COLUMN_HEADINGD_ID+","+COLUMN_ORDER+","+COLUMN_DATA+") VALUES(" +
                 "'8'," +
                 "'16'," +
@@ -3559,17 +3551,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "'8'," +
                 "'16'," +
                 "'4'," +
-                "'7'"+
+                "'6'"+
                 ")";
         database.execSQL(Data8164);
-
-        String Data8165 =  "INSERT INTO "+TABLE_HDATA_NAME + " ("+ COLUMN_MAIND_ID+","+COLUMN_HEADINGD_ID+","+COLUMN_ORDER+","+COLUMN_DATA+") VALUES(" +
-                "'8'," +
-                "'16'," +
-                "'5'," +
-                "'4'"+
-                ")";
-        database.execSQL(Data8165);
 
         //table 2
         String Data9171 =  "INSERT INTO "+TABLE_HDATA_NAME + " ("+ COLUMN_MAIND_ID+","+COLUMN_HEADINGD_ID+","+COLUMN_ORDER+","+COLUMN_DATA+") VALUES(" +

@@ -37,7 +37,9 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".UI.Explosion"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".UI.ListActivity"></activity>
+        <activity android:name=".UI.ListActivity"
+            android:label="@string/list_name"
+            ></activity>
     </application>
 
 </manifest>

@@ -15,8 +15,7 @@ import com.applicationcourse.mobile.graphmaster.R;
 public class ListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
     private ListView listView;
     private ListAdapter listAdapter;
-    private String[] videoTitle = {"Level 1.1","Level 1.2","Level 1.3","Level 1.4","Level 1.5","Level 1.6","Level 2.1","Level 2.2","Level 2.3","Level 2.4","Level 2.5","Level 2.6",
-            "Level 3.1","Level 3.2","Level 3.3","Level 3.4","Level 3.5","Level 3.6","Level 4.1","Level 4.2","Level 4.3","Level 4.4","Level 4.5","Level 4.6"};
+    private String[] videoTitle = {"Finding the Independent and Dependent Variable","Which Axis Takes Which Variable","Labelling Your Axes","Finding the Intervals for Your Axes","Creating a Title for Your Graph","Numbering Your Axes","Plotting Points On the Graph","Reading Your Graph for Information"};
     private String[] url = {"https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU",
             "https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU",
             "https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU",

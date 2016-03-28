@@ -4,6 +4,7 @@ android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:scrollbars="vertical"
 xmlns:tools="http://schemas.android.com/tools">
+
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,17 +12,34 @@ xmlns:tools="http://schemas.android.com/tools">
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".UI.MainActivity">
+    tools:context=".UI.LevelActivity">
+
+    <com.daimajia.androidviewhover.BlurLayout
+        android:id="@+id/level5"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_below="@+id/source"
+            android:id="@+id/level5Image"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/learntograph"
+            android:layout_width="match_parent"
+            android:layout_height="140dp" />
+    </com.daimajia.androidviewhover.BlurLayout>
 
     <com.daimajia.androidviewhover.BlurLayout
         android:id="@+id/level1"
+        android:layout_below="@+id/level5"
         android:layout_width="wrap_content"
         android:layout_marginBottom="5dp"
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/levelImage1"
             android:scaleType="fitXY"
-            android:src="@drawable/level1"
+            android:src="@drawable/level1kids"
             android:layout_width="match_parent"
             android:layout_height="125dp" />
     </com.daimajia.androidviewhover.BlurLayout>
@@ -38,7 +56,7 @@ xmlns:tools="http://schemas.android.com/tools">
             android:id="@+id/levelImage2"
             android:layout_centerInParent="true"
             android:scaleType="fitXY"
-            android:src="@drawable/level2"
+            android:src="@drawable/level2kids"
             android:layout_width="match_parent"
             android:layout_height="125dp" />
     </com.daimajia.androidviewhover.BlurLayout>
@@ -55,7 +73,7 @@ xmlns:tools="http://schemas.android.com/tools">
             android:id="@+id/levelImage3"
             android:layout_centerInParent="true"
             android:scaleType="fitXY"
-            android:src="@drawable/level3"
+            android:src="@drawable/level3kids"
             android:layout_width="match_parent"
             android:layout_height="125dp" />
     </com.daimajia.androidviewhover.BlurLayout>
@@ -72,24 +90,7 @@ xmlns:tools="http://schemas.android.com/tools">
             android:id="@+id/levelImage4"
             android:layout_centerInParent="true"
             android:scaleType="fitXY"
-            android:src="@drawable/level4"
-            android:layout_width="match_parent"
-            android:layout_height="140dp" />
-    </com.daimajia.androidviewhover.BlurLayout>
-
-    <com.daimajia.androidviewhover.BlurLayout
-        android:id="@+id/level5"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:layout_below="@+id/level4"
-        android:layout_width="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_below="@+id/source"
-            android:id="@+id/level5Image"
-            android:layout_centerInParent="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/videolevelbac"
+            android:src="@drawable/level4kids"
             android:layout_width="match_parent"
             android:layout_height="140dp" />
     </com.daimajia.androidviewhover.BlurLayout>

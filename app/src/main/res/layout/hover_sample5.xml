@@ -18,7 +18,7 @@
         app:oval="true" />
     <TextView
         android:id="@+id/description5"
-        android:text="Videos"
+        android:text="Watch some videos to learn how to graph"
         android:layout_marginLeft="12dp"
         android:textColor="#ffffff"
         android:layout_marginBottom="12dp"

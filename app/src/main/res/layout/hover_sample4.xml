@@ -18,7 +18,7 @@
         app:oval="true" />
     <TextView
         android:id="@+id/description4"
-        android:text="Level 4"
+        android:text="Let's go to Leve 4"
         android:layout_marginLeft="12dp"
         android:textColor="#ffffff"
         android:layout_marginBottom="12dp"
