@@ -330,9 +330,20 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
                                 if (txtTitle.getText().length() == 0) {
                                     if (circularButton1.getProgress()==0){
                                         simulateErrorProgress(circularButton1);
+                                        new MaterialDialog.Builder(DrawGraphActivity.this)
+                                                .content("Please enter the title!")
+                                                .positiveText("OK")
+                                                .onPositive(
+                                                        new MaterialDialog.SingleButtonCallback() {
+                                                            @Override
+                                                            public void onClick(MaterialDialog dialog, DialogAction which) {
+                                                                dialog.dismiss();
+                                                                circularButton1.setProgress(0);
+                                                            }
+                                                        }
+                                                )
+                                                .show();
                                         Toast.makeText(getBaseContext(), "Enter the title", Toast.LENGTH_SHORT).show();
-                                        circularButton1.setProgress(0);
-                                        circularButton1.performClick();
 
                                     }else {
                                         circularButton1.setProgress(0);
