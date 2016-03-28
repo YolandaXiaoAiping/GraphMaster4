@@ -4887,17 +4887,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
         Bitmap image31 = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.img1);
-        insertImage(8, 1, image31, database);
+        insertImage(8, 6, image31, database);
 
         Bitmap image32 = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.img2);
-        insertImage(8, 2, image32, database);
+        insertImage(8, 7, image32, database);
 
         Bitmap image33 = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.img3);
-        insertImage(8, 3, image33, database);
-        insertImage(8, 4, image33, database);
-        insertImage(8, 5, image33, database);
-        insertImage(8, 6, image33, database);
-        insertImage(8, 7, image33, database);
         insertImage(8, 8, image33, database);
 
         //Help2

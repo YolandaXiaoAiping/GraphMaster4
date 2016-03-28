@@ -141,10 +141,17 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
         if (extras != null) {
             grade = extras.getInt("grade");
         }
-
         drawGraph();
 
         getQuestions(grade);
+        if(grade == 3){
+            subQuesCount = 5;
+            xLabelValue = "x-axis label";
+            yLabelValue = "y-axis label";
+            xMultiple = 3f;
+            yMultiple = 1f;
+        }
+
         marksList = DatabaseHandler.getAllMarksList();        //To generate view for each main question
         //qid will keep track of current main question, subQuesCount will keep track of current subquestion
 
@@ -984,68 +991,69 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
 
                 float xIntepretedPos = interpretTouchPosition(x, eachBoxX, eachBoxX);
                 float xIntepretedVal = interpretXInterval(xIntepretedPos, eachBoxX, eachBoxX, 1);
+                if(xIntepretedVal > 0) {
+                    if (xpointTwice[(int) xIntepretedVal - 1] == 0) {
+                        mb.onPositive(
+                                new MaterialDialog.SingleButtonCallback() {
+                                    @Override
+                                    public void onClick(MaterialDialog dialog, DialogAction which) {
+                                        String inputTxt = xlabel[0];
+                                        float inpVal = 0;
+                                        float xIntepretedPos = interpretTouchPosition(x, eachBoxX, eachBoxX);
+                                        float xIntepretedVal = interpretXInterval(xIntepretedPos, eachBoxX, eachBoxX, 1);
+                                        Log.i("Intepreted X: ", xIntepretedPos + "");
+                                        Log.i("Intepr Val: ", xIntepretedVal + "");
 
-                if (xpointTwice[(int) xIntepretedVal - 1] == 0) {
-                    mb.onPositive(
-                            new MaterialDialog.SingleButtonCallback() {
-                                @Override
-                                public void onClick(MaterialDialog dialog, DialogAction which) {
-                                    String inputTxt = xlabel[0];
-                                    float inpVal=0;
-                                    float xIntepretedPos = interpretTouchPosition(x, eachBoxX, eachBoxX);
-                                    float xIntepretedVal = interpretXInterval(xIntepretedPos, eachBoxX, eachBoxX, 1);
-                                    Log.i("Intepreted X: ", xIntepretedPos + "");
-                                    Log.i("Intepr Val: ", xIntepretedVal + "");
-
-                                    if(inputTxt.length()>0){
-                                        inpVal = Float.parseFloat(inputTxt);
-                                    }
-                                    DecimalFormat df = new DecimalFormat();
-                                    df.setMaximumFractionDigits(2);
-                                    float interpretedX = Float.parseFloat(df.format(xIntepretedVal* xMultiple)); //only two decimal place
-                                    if ( (inpVal - interpretedX) != 0.0) {
-                                        score += (marksList[subid - 1]);
-
-                                        Toast.makeText(getBaseContext(), "Wrong input! Try again", Toast.LENGTH_SHORT).show();
-                                    } else {
-                                        canvas.drawCircle(xIntepretedPos, (eachBoxY * 9), 4, paint);
-                                        canvas.drawText(inputTxt, xIntepretedPos, usrYPosDisply, paint);
-                                        Toast.makeText(getBaseContext(), "Correct! ", Toast.LENGTH_SHORT).show();
-                                        //we decrease the count number of x axis interval
-                                        checkx--;
-                                        //we set this interval unavailable,in ther words,if we touch this interval again ,a toast will appear and the text will not change
-                                        xpointTwice[(int) xIntepretedVal - 1] = 1;
-                                    }
-
-                                    dialog.dismiss();
-                                    paint.setColor(Color.BLACK);
-
-                                }
-                            }
-                    );
-                    mb.onNegative(
-                            new MaterialDialog.SingleButtonCallback() {
-                                @Override
-                                public void onClick(MaterialDialog dialog, DialogAction which) {
-                                    dialog.dismiss();
-                                }
-                            }
-                    );
-
-
-                } else {
-                    new MaterialDialog.Builder(this)
-                            .content("You've already set this point !Let's choose other points!")
-                            .positiveText("OK")
-                            .onPositive(
-                                    new MaterialDialog.SingleButtonCallback() {
-                                        @Override
-                                        public void onClick(MaterialDialog dialog, DialogAction which) {
-                                            dialog.dismiss();
+                                        if (inputTxt.length() > 0) {
+                                            inpVal = Float.parseFloat(inputTxt);
                                         }
+                                        DecimalFormat df = new DecimalFormat();
+                                        df.setMaximumFractionDigits(2);
+                                        float interpretedX = Float.parseFloat(df.format(xIntepretedVal * xMultiple)); //only two decimal place
+                                        if ((inpVal - interpretedX) != 0.0) {
+                                            score += (marksList[subid - 1]);
+
+                                            Toast.makeText(getBaseContext(), "Wrong input! Try again", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            canvas.drawCircle(xIntepretedPos, (eachBoxY * 9), 4, paint);
+                                            canvas.drawText(inputTxt, xIntepretedPos, usrYPosDisply, paint);
+                                            Toast.makeText(getBaseContext(), "Correct! ", Toast.LENGTH_SHORT).show();
+                                            //we decrease the count number of x axis interval
+                                            checkx--;
+                                            //we set this interval unavailable,in ther words,if we touch this interval again ,a toast will appear and the text will not change
+                                            xpointTwice[(int) xIntepretedVal - 1] = 1;
+                                        }
+
+                                        dialog.dismiss();
+                                        paint.setColor(Color.BLACK);
+
                                     }
-                            )
-                            .show();
+                                }
+                        );
+                        mb.onNegative(
+                                new MaterialDialog.SingleButtonCallback() {
+                                    @Override
+                                    public void onClick(MaterialDialog dialog, DialogAction which) {
+                                        dialog.dismiss();
+                                    }
+                                }
+                        );
+
+
+                    } else {
+                        new MaterialDialog.Builder(this)
+                                .content("You've already set this point !Let's choose other points!")
+                                .positiveText("OK")
+                                .onPositive(
+                                        new MaterialDialog.SingleButtonCallback() {
+                                            @Override
+                                            public void onClick(MaterialDialog dialog, DialogAction which) {
+                                                dialog.dismiss();
+                                            }
+                                        }
+                                )
+                                .show();
+                    }
                 }
             }else{
                 new MaterialDialog.Builder(this)
@@ -1120,86 +1128,88 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
 
                 final float usrXPosDisply = (xInitial - (xInitial) / 2.5f);  //For displaying the entered point by user at pos lower than the x-axis
                 float yIntepretedVal = interpretYInterval(y, eachBoxY, eachBoxY, 1);
-                if (ypointTwice[(int) yIntepretedVal - 1] == 0) {
-                    final String[] xlabel =new String[1];
-                    final MaterialDialog.Builder mb = new MaterialDialog.Builder(this);
-                    mb.title("Y-axis interval");
-                    mb.content("Enter Intervals for the Y-axis");
-                    mb.inputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_DECIMAL);
-                    mb.positiveText("Submit");
-                    mb.negativeText("Cancel");
-                    mb.alwaysCallInputCallback();
-                    mb.input(0, 0, false, new MaterialDialog.InputCallback() {
-                        @Override
-                        public void onInput(MaterialDialog dialog, CharSequence input) {
-                            if (input.toString().equals("")){
-                                dialog.setContent("Interval can't be empty!");
-                                dialog.getActionButton(DialogAction.POSITIVE).setEnabled(false);
-                            }else{
-                                dialog.getActionButton(DialogAction.POSITIVE).setEnabled(true);
-                                xlabel[0] = input.toString();
-                            }
-                        }
-                    }).show();
-                    AlertDialog.Builder alert = new AlertDialog.Builder(this);
-                    alert.setTitle("Enter Intervals for Y-axis");
-                    // Set an EditText view to get user input
-                    final EditText input = new EditText(this);
-                    input.setInputType(InputType.TYPE_CLASS_NUMBER);
-                    alert.setView(input);
-                    mb.onPositive(
-                            new MaterialDialog.SingleButtonCallback() {
-                                @Override
-                                public void onClick(MaterialDialog dialog, DialogAction which) {
-                                    String inputTxt = xlabel[0];
-                                    float inpVal = 0;
-                                    float yIntepretedPos = interpretTouchPosition(y, eachBoxY, eachBoxY);
-                                    float yIntepretedVal = interpretYInterval(y, eachBoxY, eachBoxY, 1);
-                                    Log.i("Intepreted Y: ", yIntepretedPos + "");
-                                    Log.i("Intepr Val: ", yIntepretedVal + "");
-                                    if (inputTxt.length() > 0) {
-                                        inpVal = Float.parseFloat(inputTxt);
-                                    }
-                                    DecimalFormat df = new DecimalFormat();
-                                    df.setMaximumFractionDigits(2);
-                                    float interpretedY = Float.parseFloat(df.format(yIntepretedVal* yMultiple)); //
-                                    if ((inpVal - interpretedY) != 0.0) {
-                                        Toast.makeText(getBaseContext(), "Wrong input! Try again", Toast.LENGTH_SHORT).show();
-                                        score += (marksList[subid - 1]);
-                                    } else {
-                                        canvas.drawCircle(xInitial, yIntepretedPos, 4, paint);
-                                        canvas.drawText(inputTxt + "", usrXPosDisply, yIntepretedPos, paint);
-                                        Toast.makeText(getBaseContext(), "Correct interval value! ", Toast.LENGTH_SHORT).show();
-                                        checky--;
-                                        ypointTwice[(int) yIntepretedVal - 1] = 1;
-                                    }
-                                    dialog.dismiss();
-                                    paint.setColor(Color.BLACK);
+                if(yIntepretedVal > 0){
+                    if (ypointTwice[(int) yIntepretedVal - 1] == 0) {
+                        final String[] xlabel =new String[1];
+                        final MaterialDialog.Builder mb = new MaterialDialog.Builder(this);
+                        mb.title("Y-axis interval");
+                        mb.content("Enter Intervals for the Y-axis");
+                        mb.inputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_DECIMAL);
+                        mb.positiveText("Submit");
+                        mb.negativeText("Cancel");
+                        mb.alwaysCallInputCallback();
+                        mb.input(0, 0, false, new MaterialDialog.InputCallback() {
+                            @Override
+                            public void onInput(MaterialDialog dialog, CharSequence input) {
+                                if (input.toString().equals("")){
+                                    dialog.setContent("Interval can't be empty!");
+                                    dialog.getActionButton(DialogAction.POSITIVE).setEnabled(false);
+                                }else{
+                                    dialog.getActionButton(DialogAction.POSITIVE).setEnabled(true);
+                                    xlabel[0] = input.toString();
                                 }
                             }
-                    );
-                    mb.onNegative(
-                            new MaterialDialog.SingleButtonCallback() {
-                                @Override
-                                public void onClick(MaterialDialog dialog, DialogAction which) {
-                                    dialog.dismiss();
-                                }
-                            }
-                    );
-
-                } else {
-                    new MaterialDialog.Builder(this)
-                            .content("You've already set this point !Let's choose other points!")
-                            .positiveText("OK")
-                            .onPositive(
-                                    new MaterialDialog.SingleButtonCallback() {
-                                        @Override
-                                        public void onClick(MaterialDialog dialog, DialogAction which) {
-                                            dialog.dismiss();
+                        }).show();
+                        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                        alert.setTitle("Enter Intervals for Y-axis");
+                        // Set an EditText view to get user input
+                        final EditText input = new EditText(this);
+                        input.setInputType(InputType.TYPE_CLASS_NUMBER);
+                        alert.setView(input);
+                        mb.onPositive(
+                                new MaterialDialog.SingleButtonCallback() {
+                                    @Override
+                                    public void onClick(MaterialDialog dialog, DialogAction which) {
+                                        String inputTxt = xlabel[0];
+                                        float inpVal = 0;
+                                        float yIntepretedPos = interpretTouchPosition(y, eachBoxY, eachBoxY);
+                                        float yIntepretedVal = interpretYInterval(y, eachBoxY, eachBoxY, 1);
+                                        Log.i("Intepreted Y: ", yIntepretedPos + "");
+                                        Log.i("Intepr Val: ", yIntepretedVal + "");
+                                        if (inputTxt.length() > 0) {
+                                            inpVal = Float.parseFloat(inputTxt);
                                         }
+                                        DecimalFormat df = new DecimalFormat();
+                                        df.setMaximumFractionDigits(2);
+                                        float interpretedY = Float.parseFloat(df.format(yIntepretedVal* yMultiple)); //
+                                        if ((inpVal - interpretedY) != 0.0) {
+                                            Toast.makeText(getBaseContext(), "Wrong input! Try again", Toast.LENGTH_SHORT).show();
+                                            score += (marksList[subid - 1]);
+                                        } else {
+                                            canvas.drawCircle(xInitial, yIntepretedPos, 4, paint);
+                                            canvas.drawText(inputTxt + "", usrXPosDisply, yIntepretedPos, paint);
+                                            Toast.makeText(getBaseContext(), "Correct interval value! ", Toast.LENGTH_SHORT).show();
+                                            checky--;
+                                            ypointTwice[(int) yIntepretedVal - 1] = 1;
+                                        }
+                                        dialog.dismiss();
+                                        paint.setColor(Color.BLACK);
                                     }
-                            )
-                            .show();
+                                }
+                        );
+                        mb.onNegative(
+                                new MaterialDialog.SingleButtonCallback() {
+                                    @Override
+                                    public void onClick(MaterialDialog dialog, DialogAction which) {
+                                        dialog.dismiss();
+                                    }
+                                }
+                        );
+
+                    } else {
+                        new MaterialDialog.Builder(this)
+                                .content("You've already set this point !Let's choose other points!")
+                                .positiveText("OK")
+                                .onPositive(
+                                        new MaterialDialog.SingleButtonCallback() {
+                                            @Override
+                                            public void onClick(MaterialDialog dialog, DialogAction which) {
+                                                dialog.dismiss();
+                                            }
+                                        }
+                                )
+                                .show();
+                    }
                 }
             }else {
                 new MaterialDialog.Builder(this)
@@ -1678,10 +1688,21 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
             //Get  x and y axis value as points
             currentQ = mainQuesList.get(qid);
             pointList = DatabaseHandler.getAllHeadingData((int)currentQ.getMqId());
-            checkpoint = pointList.size();
+            //for demo
+            if(grade == 3) {
+                checkpoint = 2;
+            }else{
+                checkpoint = pointList.size();
+            }
             //set the check value
-            checkx = 7;
-            checky =7;
+            //if else added only for demo purpose to reduce the no of checks
+            if(grade == 3){
+                checkx = 2;
+                checky = 2;
+            }else {
+                checkx = 7;
+                checky = 7;
+            }
 
             //initialize the checkTwice array;
             xpointTwice = new int[(int) checkx];
