@@ -26,7 +26,7 @@ public class LevelActivity extends Activity {
 
     private DatabaseHandler databaseHandler;
     private static Context mContext = null;
-    private com.daimajia.androidviewhover.BlurLayout mSampleLayout, mSampleLayout2, mSampleLayout3, mSampleLayout4;
+    private com.daimajia.androidviewhover.BlurLayout mSampleLayout, mSampleLayout2, mSampleLayout3, mSampleLayout4,mSampleLayout5;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -113,7 +113,24 @@ public class LevelActivity extends Activity {
         mSampleLayout4.enableZoomBackground(true);
         mSampleLayout4.setBlurDuration(1200);
 
-
+        //Yolanda
+        mSampleLayout5 = (com.daimajia.androidviewhover.BlurLayout)findViewById(R.id.level5);
+        View hover5 = LayoutInflater.from(mContext).inflate(R.layout.hover_sample5,null);
+        hover5.findViewById(R.id.avatar5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "Watch some graph videos", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LevelActivity.this, ListActivity.class);
+                startActivity(intent);
+            }
+        });
+        mSampleLayout5.setHoverView(hover5);
+        mSampleLayout5.setBlurDuration(550);
+        mSampleLayout5.addChildAppearAnimator(hover5, R.id.description5, Techniques.FadeInUp);
+        mSampleLayout5.addChildDisappearAnimator(hover5, R.id.description5, Techniques.FadeOutDown);
+        mSampleLayout5.addChildAppearAnimator(hover5, R.id.avatar5, Techniques.DropOut, 1200);
+        mSampleLayout5.addChildDisappearAnimator(hover5, R.id.avatar5, Techniques.FadeOutUp);
+        mSampleLayout5.setBlurDuration(1000);
 
 
     }

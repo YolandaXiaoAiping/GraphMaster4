@@ -15,10 +15,10 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null) {
-            //Intent intent = new Intent(MainActivity.this, Explosion.class);
-            //startActivity(intent);
-            Intent intent = new Intent(MainActivity.this, LevelActivity.class);
+            Intent intent = new Intent(MainActivity.this, Explosion.class);
             startActivity(intent);
+            //Intent intent = new Intent(MainActivity.this, LevelActivity.class);
+            //startActivity(intent);
         }
 
     }

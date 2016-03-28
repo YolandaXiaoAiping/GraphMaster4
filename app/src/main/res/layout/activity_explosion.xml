@@ -17,15 +17,25 @@ tools:context="com.applicationcourse.mobile.graphmaster.UI.Explosion">
     android:layout_height="wrap_content"
     android:layout_marginTop="48dp"
     android:id="@+id/root"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     >
 
     <ImageView
-        android:layout_width="0dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:src="@drawable/graph2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_weight="1"
         android:clickable="true"
-        android:src="@drawable/p1" />
+        android:src="@drawable/gm" />
+
 
 </LinearLayout>
 

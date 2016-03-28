@@ -21,7 +21,7 @@ xmlns:tools="http://schemas.android.com/tools">
         <ImageView
             android:id="@+id/levelImage1"
             android:scaleType="fitXY"
-            android:src="@drawable/level4bac"
+            android:src="@drawable/level1"
             android:layout_width="match_parent"
             android:layout_height="125dp" />
     </com.daimajia.androidviewhover.BlurLayout>
@@ -38,7 +38,7 @@ xmlns:tools="http://schemas.android.com/tools">
             android:id="@+id/levelImage2"
             android:layout_centerInParent="true"
             android:scaleType="fitXY"
-            android:src="@drawable/level2pic"
+            android:src="@drawable/level2"
             android:layout_width="match_parent"
             android:layout_height="125dp" />
     </com.daimajia.androidviewhover.BlurLayout>
@@ -55,7 +55,7 @@ xmlns:tools="http://schemas.android.com/tools">
             android:id="@+id/levelImage3"
             android:layout_centerInParent="true"
             android:scaleType="fitXY"
-            android:src="@drawable/level3pic"
+            android:src="@drawable/level3"
             android:layout_width="match_parent"
             android:layout_height="125dp" />
     </com.daimajia.androidviewhover.BlurLayout>
@@ -72,7 +72,24 @@ xmlns:tools="http://schemas.android.com/tools">
             android:id="@+id/levelImage4"
             android:layout_centerInParent="true"
             android:scaleType="fitXY"
-            android:src="@drawable/level4pic"
+            android:src="@drawable/level4"
+            android:layout_width="match_parent"
+            android:layout_height="140dp" />
+    </com.daimajia.androidviewhover.BlurLayout>
+
+    <com.daimajia.androidviewhover.BlurLayout
+        android:id="@+id/level5"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/level4"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_below="@+id/source"
+            android:id="@+id/level5Image"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/videolevelbac"
             android:layout_width="match_parent"
             android:layout_height="140dp" />
     </com.daimajia.androidviewhover.BlurLayout>

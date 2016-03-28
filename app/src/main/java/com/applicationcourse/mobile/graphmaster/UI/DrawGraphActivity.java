@@ -101,8 +101,9 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
     int xLowerValue,xHigherValue, yLowerValue, yHigherValue;
     CircleButton textButton,pictureButton;
     CircleButton menuButton;
+    //Yolanda 1 line
+    CircleButton calButton;
     float step;
-    //Yolanda
     String XLabel,YLabel;
     final String[] intervalue = new String[1];
     final Boolean[] getValue = {false};
@@ -128,6 +129,8 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
         menuButton = (CircleButton)findViewById(R.id.menuButton);
         textButton = (CircleButton)findViewById(R.id.textButton);
         pictureButton = (CircleButton)findViewById(R.id.ImageButton);
+        //Yolanda 1 line
+        calButton = (CircleButton)findViewById(R.id.calButton);
         seekRelative = (RelativeLayout) findViewById(R.id.seekLayout);
         //Yolanda
         final CircularProgressButton circularButton1 = (CircularProgressButton)findViewById(R.id.circularButton1);
@@ -576,9 +579,19 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
                 }
         );
 
+        //Yolanda listener:OPEN CALCULATOR
+        calButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setAction(Intent.ACTION_MAIN);
+                i.addCategory(Intent.CATEGORY_APP_CALCULATOR);
+                startActivity(i);
+            }
+        });
+
     }
 
-    //Yolanda:circular Button
     private void simulateSuccessProgress(final CircularProgressButton button) {
         ValueAnimator widthAnimation = ValueAnimator.ofInt(1, 100);
         widthAnimation.setDuration(500);
@@ -1273,6 +1286,9 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
 
 
     private void setQuestionView() {
+        //Yolanda 1 line
+        calButton.setVisibility(View.INVISIBLE);
+
         if(subQuesCount == 0){
             timeStart = System.currentTimeMillis();
         }
@@ -1305,6 +1321,9 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
             optionCount = 0;
         } else if (optionType.equals("TextBox")) {
             //Yolanda
+            if(subQuesCount==3||subQuesCount==4){
+                calButton.setVisibility(View.VISIBLE);
+            }
             LinearLayout layoutDynamic = (LinearLayout) findViewById(R.id.layoutDynamic);
             editTextDyn = new EditText(getApplicationContext());
             editTextDyn.setId(R.id.edittext_dynamic);
@@ -1324,10 +1343,12 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
                                     mb.content("Please type in the x axis value.");
                                     mb.inputType(InputType.TYPE_CLASS_NUMBER);
 
+
                                 } else if (subQuesCount == 4) {
                                     mb.title("Y Axis Interval");
                                     mb.content("Please type in the y axis value.");
                                     mb.inputType(InputType.TYPE_CLASS_NUMBER);
+
 
                                 } else if (grade == 4 && subQuesCount == 0) {
                                     mb.title("Independent value");

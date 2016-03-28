@@ -177,11 +177,20 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_below="@+id/radioSetupSel"/>
 
+            <at.markushi.ui.CircleButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/calButton"
+                android:src="@drawable/calculator1"
+                android:layout_gravity="right"
+                app:cb_color="#99CC00"
+                app:cb_pressedRingWidth="10dp"
+                />
+
             <com.dd.CircularProgressButton
                 android:id="@+id/circularButton1"
-                android:layout_width="196dp"
-                android:layout_height="64dp"
-                android:layout_marginTop="16dp"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:textColor="@color/cpb_white"
                 android:textSize="18sp"

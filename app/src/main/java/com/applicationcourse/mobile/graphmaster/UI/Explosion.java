@@ -16,7 +16,7 @@ import tyrantgit.explosionfield.ExplosionField;
 public class Explosion extends AppCompatActivity {
     private ExplosionField mExplosionField;
     private CountDownTimer countDownTimer;
-    private final long startTimer = 1000;
+    private final long startTimer = 1100;
 
     //private Button test;
     @Override

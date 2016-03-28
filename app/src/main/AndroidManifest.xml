@@ -34,7 +34,8 @@
             android:label="@string/title_activity_show_text"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".UI.LevelActivity" />
-        <activity android:name=".UI.Explosion"></activity>
+        <activity android:name=".UI.Explosion" />
+        <activity android:name=".UI.ListActivity"></activity>
     </application>
 
 </manifest>
