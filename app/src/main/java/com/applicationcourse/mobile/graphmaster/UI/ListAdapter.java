@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.applicationcourse.mobile.graphmaster.R;
@@ -27,6 +28,7 @@ public class ListAdapter extends ArrayAdapter<String> {
     }
     static class TextHolder{
         TextView videotxt;
+        ImageView videoicon;
     }
 
     @Override
@@ -42,6 +44,7 @@ public class ListAdapter extends ArrayAdapter<String> {
 
             textHolder = new TextHolder();
             textHolder.videotxt = (TextView)view.findViewById(R.id.videoTitle);
+            textHolder.videoicon = (ImageView)view.findViewById(R.id.videolist);
 
             view.setTag(textHolder);
 
