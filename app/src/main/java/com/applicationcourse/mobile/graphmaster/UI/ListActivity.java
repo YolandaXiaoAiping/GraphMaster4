@@ -16,9 +16,9 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
     private ListView listView;
     private ListAdapter listAdapter;
     private String[] videoTitle = {"Finding the Independent and Dependent Variable","Which Axis Takes Which Variable","Labelling Your Axes","Finding the Intervals for Your Axes","Creating a Title for Your Graph","Numbering Your Axes","Plotting Points On the Graph","Reading Your Graph for Information"};
-    private String[] url = {"https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU",
-            "https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU",
-            "https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU",
+    private String[] url = {"https://www.youtube.com/watch?v=ddsqbyR24so","https://www.youtube.com/watch?v=iQHB6Q8GfC8&feature=youtu.be&hd=1"," https://www.youtube.com/watch?v=OttITt0JO5Y",
+            "https://www.youtube.com/watch?v=_uV9tD4sDKk&feature=youtu.be&hd=1","https://www.youtube.com/watch?v=E4lIzMkZ-qk&feature=youtu.be&hd=1","https://www.youtube.com/watch?v=_uV9tD4sDKk&feature=youtu.be&hd=1",
+            "https://www.youtube.com/watch?v=np28WYsNDLA&feature=youtu.be&hd=1","https://www.youtube.com/watch?v=0_ieX0pGnbg","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU",
             "https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU","https://youtu.be/liFLl3Eh_HU"};
 
     @Override

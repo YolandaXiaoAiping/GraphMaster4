@@ -40,11 +40,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     ////////////////////////////////////////////////////////////////////////////
 
     ////////////////////////Main Question Table//////////////////////////////////////
-    public static final String TABLE_ENTRIES = "MainQuestion"; // Create graph question table
-    public static final String COLUMN_MAIN_ID = "mainId";
-    public static final String COLUMN_QUESTION = "question";
-    public static final String COLUMN_TYPE = "type";
-    public static final String COLUMN_FUNCTION = "function";
     public static final String COLUMN_GRADE = "level";
 
     ///////////////////////SubQuestion Table////////////////////////////////////
@@ -52,6 +47,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public static final String COLUMN_SUB_ID = "subId";
     public static final String COLUMN_SUB_FUNCTION = "function";
     public static final String COLUMN_SUB_TYPE = "type";
+    public static final String TABLE_ENTRIES = "MainQuestion"; // Creatgraph question table
+    public static final String COLUMN_MAIN_ID = "mainId";
+    public static final String COLUMN_QUESTION = "question";
+    public static final String COLUMN_TYPE = "type";
+    public static final String COLUMN_FUNCTION = "function";
     public static final String COLUMN_SUBQUESTION = "subquestion";
     public static final String COLUMN_OPTION_TYPE = "optionType";
 
@@ -2230,7 +2230,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "'1'," +
                 "'Number of snails that cross the finish line in 1 minute'," +
                 "'F'," +
-                "'Oops.  That’s incorrect.  The number of snails that cross the finish line depends on the number of snails that start the race, so it is the dependent variable.')";
+                "'Oops.  That’s incorrect. \n\n The number of snails that cross the finish line depends on the number of snails that start the race, so it is the dependent variable.')";
         database.execSQL(Option112);
 
         String Option121 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
@@ -2254,10 +2254,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "'3'," +
                 "'none'," +
                 "'T'," +
-                "'The answer we had was X Axis:" +
-                "Exemplar: Number of Snails Who Start the Race; " +
+                "'The answer we had was :\nX Axis:" +
+                "Number of Snails Who Start the Race\n " +
                 "Y Axis:" +
-                "Exemplar: Number of Snails Who Finish the Race in 1 Minute.  Do your axes labels look similar?  Have you capitalized key words?  Have you placed units in brackets after the axes label?  Have you placed arrows at the end of each axis? Take a moment to correct your axes labels if you think changes need to be made.')";
+                "Number of Snails Who Finish the Race in 1 Minute.\nDo your axes labels look similar?  Have you capitalized key words?  Have you placed units in brackets after the axes label?  Have you placed arrows at the end of each axis? \n\nTake a moment to correct your axes labels if you think changes need to be made.')";
         database.execSQL(Option131);
 
         String Option141 = "INSERT INTO "+TABLE_OPTION_NAME+ " ("+ COLUMN_MAINQ_ID+","+COLUMN_SUBQ_ID+","+COLUMN_OPTION_VALUE+","+COLUMN_ANSWER +","+COLUMN_EXPLAIN+") VALUES(" +
@@ -2301,9 +2301,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "'6'," +
                 "'none'," +
                 "'T'," +
-                "'Titles can be tricky to write.  Check your title against the one we wrote for this question :Number of Snails that Cross the Finish Line in 1 Minute Depending on How Many Snails Start the Race." +
+                "'Titles can be tricky to write. \n Check your title against the one we wrote for this question:\nNumber of Snails that Cross the Finish Line in 1 Minute Depending on How Many Snails Start the Race.  \n\n" +
                 "Did your title begin “Graph A:”?" +
-                "Are key words capitalized?  Have you included the units in brackets?" +
+                "Are key words capitalized?  Have you included the units in brackets? " +
                 "Have you told the reader of your graph exactly what the graph is about?')";
         database.execSQL(Option161);
 
@@ -5848,8 +5848,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "'none'" +
                 ")";
         database.execSQL(Text28);
-
-        
 
         String Text81 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
                 "'8'," +

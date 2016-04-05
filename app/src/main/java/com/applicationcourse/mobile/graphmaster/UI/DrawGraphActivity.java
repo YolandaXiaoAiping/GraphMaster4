@@ -144,13 +144,6 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
         drawGraph();
 
         getQuestions(grade);
-        if(grade == 3){
-            subQuesCount = 5;
-            xLabelValue = "x-axis label";
-            yLabelValue = "y-axis label";
-            xMultiple = 3f;
-            yMultiple = 1f;
-        }
 
         marksList = DatabaseHandler.getAllMarksList();        //To generate view for each main question
         //qid will keep track of current main question, subQuesCount will keep track of current subquestion
@@ -1524,7 +1517,11 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
                                 //check if the Label is correct
                                 if (inputVal.length() > 0) {
                                     paint.setColor(Color.BLACK);
-                                    canvas.drawText(inputVal, 0, inputVal.length(), positionX, usrYPosDisply, paint);
+                                    if(inputVal.length() < 20) {
+                                        canvas.drawText(inputVal, 0, inputVal.length(), positionX, usrYPosDisply, paint);
+                                    }else{
+                                        canvas.drawText(inputVal, 0, inputVal.length(), eachBoxX, usrYPosDisply, paint);
+                                    }
                                     paint.setColor(Color.BLACK);
                                     XLabel = inputVal;//Yolanda
                                     //set checkXLabel value so that it shows that we've already type in the correct x Label value
@@ -1616,7 +1613,11 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
                                 paint.setColor(Color.BLACK);
                                 canvas.save();
                                 canvas.rotate(-90, 120, 90);
-                                canvas.drawText(inputVal, -150, 0, paint);
+                                if(inputVal.length() < 20) {
+                                    canvas.drawText(inputVal, -100, 0, paint);
+                                }else {
+                                    canvas.drawText(inputVal, -250, 0, paint);
+                                }
                                 canvas.restore();
                                 YLabel = inputVal;
                                 paint.setColor(Color.BLACK);
@@ -1688,21 +1689,11 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
             //Get  x and y axis value as points
             currentQ = mainQuesList.get(qid);
             pointList = DatabaseHandler.getAllHeadingData((int)currentQ.getMqId());
-            //for demo
-            if(grade == 3) {
-                checkpoint = 2;
-            }else{
-                checkpoint = pointList.size();
-            }
+            checkpoint = pointList.size();
+
             //set the check value
-            //if else added only for demo purpose to reduce the no of checks
-            if(grade == 3){
-                checkx = 2;
-                checky = 2;
-            }else {
-                checkx = 7;
-                checky = 7;
-            }
+            checkx = 7;
+            checky = 7;
 
             //initialize the checkTwice array;
             xpointTwice = new int[(int) checkx];
