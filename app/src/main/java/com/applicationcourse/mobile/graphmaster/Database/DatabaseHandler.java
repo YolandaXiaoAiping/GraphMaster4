@@ -5253,7 +5253,603 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 ")";
         database.execSQL(Video88);
         ////////MainQ 9////
+        String Video91 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'9'," +
+                "'1'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Yx9ETph_5F0'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video91);
 
+        String Video92 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'9'," +
+                "'2'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=4_CkeS0A8T4'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video92);
+
+        String Video93 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'9'," +
+                "'3'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video93);
+
+        String Video94 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'9'," +
+                "'4'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video94);
+
+        String Video95 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'9'," +
+                "'5'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video95);
+
+        String Video96 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'9'," +
+                "'6'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video96);
+
+        String Video97 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'9'," +
+                "'7'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video97);
+
+        String Video98 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'9'," +
+                "'8'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video98);
+        //////MainQ 10///////
+        String Video101 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'10'," +
+                "'1'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Yx9ETph_5F0'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video101);
+
+        String Video102 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'10'," +
+                "'2'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=4_CkeS0A8T4'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video102);
+
+        String Video103 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'10'," +
+                "'3'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video103);
+
+        String Video104 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'10'," +
+                "'4'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video104);
+
+        String Video105 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'10'," +
+                "'5'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video105);
+
+        String Video106 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'10'," +
+                "'6'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video106);
+
+        String Video107 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'10'," +
+                "'7'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video107);
+
+        String Video108 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'10'," +
+                "'8'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video108);
+        //MainQ 11//
+        String Video111 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'11'," +
+                "'1'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Yx9ETph_5F0'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video111);
+
+        String Video112 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'11'," +
+                "'2'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=4_CkeS0A8T4'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video112);
+
+        String Video113 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'11'," +
+                "'3'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video113);
+
+        String Video114 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'11'," +
+                "'4'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video114);
+
+        String Video115 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'11'," +
+                "'5'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video115);
+
+        String Video116 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'11'," +
+                "'6'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video116);
+
+        String Video117 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'11'," +
+                "'7'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video117);
+
+        String Video118 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'11'," +
+                "'8'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video118);
+        ////Level 4/////
+        ////MainQ 12/////
+        String Video121 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'12'," +
+                "'1'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Yx9ETph_5F0'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video121);
+
+        String Video122 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'12'," +
+                "'2'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=4_CkeS0A8T4'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video122);
+
+        String Video123 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'12'," +
+                "'3'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video123);
+
+        String Video124 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'12'," +
+                "'4'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video124);
+
+        String Video125 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'12'," +
+                "'5'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video125);
+
+        String Video126 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'12'," +
+                "'6'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video126);
+
+        String Video127 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'12'," +
+                "'7'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video127);
+
+        String Video128 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'12'," +
+                "'8'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video128);
+        //MainQ13//
+        String Video131 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'13'," +
+                "'1'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Yx9ETph_5F0'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video131);
+
+        String Video132 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'13'," +
+                "'2'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=4_CkeS0A8T4'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video132);
+
+        String Video133 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'13'," +
+                "'3'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video133);
+
+        String Video134 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'13'," +
+                "'4'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video134);
+
+        String Video135 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'13'," +
+                "'5'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video135);
+
+        String Video136 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'13'," +
+                "'6'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video136);
+
+        String Video137 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'13'," +
+                "'7'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video137);
+
+        String Video138 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'13'," +
+                "'8'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video138);
+        /////Mainq14/////
+        String Video141 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'14'," +
+                "'1'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Yx9ETph_5F0'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video141);
+
+        String Video142 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'14'," +
+                "'2'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=4_CkeS0A8T4'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video142);
+
+        String Video143 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'14'," +
+                "'3'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video143);
+
+        String Video144 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'14'," +
+                "'4'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video144);
+
+        String Video145 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'14'," +
+                "'5'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video145);
+
+        String Video146 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'14'," +
+                "'6'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video146);
+
+        String Video147 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'14'," +
+                "'7'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video147);
+
+        String Video148 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'14'," +
+                "'8'," +
+                "'video'," +
+                "'https://www.youtube.com/watch?v=Q-lXDVS66Fo'," +
+                "'none'" +
+                ")";
+        database.execSQL(Video148);
+
+        //Level1///
+        //////MainQ 1/////
+        String Text11 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'1'," +
+                "'1'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text11);
+
+        String Text12 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'1'," +
+                "'2'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text12);
+
+        String Text13 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'1'," +
+                "'3'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text13);
+
+        String Text14 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'1'," +
+                "'4'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text14);
+
+        String Text15 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'1'," +
+                "'5'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text15);
+
+        String Text16 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'1'," +
+                "'6'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text16);
+
+        String Text17 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'1'," +
+                "'7'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text17);
+
+        String Text18 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'1'," +
+                "'8'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text18);
+
+        //////MainQ2//////
+        String Text21 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'2'," +
+                "'1'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text21);
+
+        String Text22 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'2'," +
+                "'2'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text22);
+
+        String Text23 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'2'," +
+                "'3'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text23);
+
+        String Text24 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'2'," +
+                "'4'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text24);
+
+        String Text25 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'2'," +
+                "'5'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text25);
+
+        String Text26 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'2'," +
+                "'6'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text26);
+
+        String Text27 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'2'," +
+                "'7'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text27);
+
+        String Text28 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
+                "'2'," +
+                "'8'," +
+                "'text'," +
+                "'The independent variable is always placed on the x-axis.\n" +
+                "The dependent variable is always placed on the y-axis.\n'," +
+                "'none'" +
+                ")";
+        database.execSQL(Text28);
+
+        
 
         String Text81 = "INSERT INTO " + TABLE_HELP + " (" + COLUMN_MID + " ," + COLUMN_SID + " ," + COLUMN_TY + " ," + COLUMN_VALUE + " ," + COLUMN_IMAGE + ") VALUES(" +
                 "'8'," +
@@ -5357,6 +5953,24 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         insertImage(1, 7, image11, database);
         insertImage(1, 8, image11, database);
 
+        insertImage(2, 1, image11, database);
+        insertImage(2, 2, image11, database);
+        insertImage(2, 3, image11, database);
+        insertImage(2, 4, image11, database);
+        insertImage(2, 5, image11, database);
+        insertImage(2, 6, image11, database);
+        insertImage(2, 7, image11, database);
+        insertImage(2, 8, image11, database);
+
+        insertImage(3, 1, image11, database);
+        insertImage(3, 2, image11, database);
+        insertImage(3, 3, image11, database);
+        insertImage(3, 4, image11, database);
+        insertImage(3, 5, image11, database);
+        insertImage(3, 6, image11, database);
+        insertImage(3, 7, image11, database);
+        insertImage(3, 8, image11, database);
+
         //level2(4 main questions)
         insertImage(4, 1, image11, database);
         insertImage(4, 2, image11, database);
@@ -5366,6 +5980,33 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         insertImage(4, 6, image11, database);
         insertImage(4, 7, image11, database);
         insertImage(4, 8, image11, database);
+
+        insertImage(5, 1, image11, database);
+        insertImage(5, 2, image11, database);
+        insertImage(5, 3, image11, database);
+        insertImage(5, 4, image11, database);
+        insertImage(5, 5, image11, database);
+        insertImage(5, 6, image11, database);
+        insertImage(5, 7, image11, database);
+        insertImage(5, 8, image11, database);
+
+        insertImage(6, 1, image11, database);
+        insertImage(6, 2, image11, database);
+        insertImage(6, 3, image11, database);
+        insertImage(6, 4, image11, database);
+        insertImage(6, 5, image11, database);
+        insertImage(6, 6, image11, database);
+        insertImage(6, 7, image11, database);
+        insertImage(6, 8, image11, database);
+
+        insertImage(7, 1, image11, database);
+        insertImage(7, 2, image11, database);
+        insertImage(7, 3, image11, database);
+        insertImage(7, 4, image11, database);
+        insertImage(7, 5, image11, database);
+        insertImage(7, 6, image11, database);
+        insertImage(7, 7, image11, database);
+        insertImage(7, 8, image11, database);
 
         //level3
         Bitmap image86 = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.quespic81);
@@ -5382,8 +6023,60 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         insertImage(8, 6, image86, database);
         insertImage(8, 7, image86, database);
         insertImage(8, 8, image86, database);
-        //Help2
 
+        insertImage(9, 1, image11, database);
+        insertImage(9, 2, image11, database);
+        insertImage(9, 3, image11, database);
+        insertImage(9, 4, image11, database);
+        insertImage(9, 5, image11, database);
+        insertImage(9, 6, image11, database);
+        insertImage(9, 7, image11, database);
+        insertImage(9, 8, image11, database);
+
+        insertImage(10, 1, image11, database);
+        insertImage(10, 2, image11, database);
+        insertImage(10, 3, image11, database);
+        insertImage(10, 4, image11, database);
+        insertImage(10, 5, image11, database);
+        insertImage(10, 6, image11, database);
+        insertImage(10, 7, image11, database);
+        insertImage(10, 8, image11, database);
+
+        insertImage(11, 1, image11, database);
+        insertImage(11, 2, image11, database);
+        insertImage(11, 3, image11, database);
+        insertImage(11, 4, image11, database);
+        insertImage(11, 5, image11, database);
+        insertImage(11, 6, image11, database);
+        insertImage(11, 7, image11, database);
+        insertImage(11, 8, image11, database);
+
+        insertImage(12, 1, image11, database);
+        insertImage(12, 2, image11, database);
+        insertImage(12, 3, image11, database);
+        insertImage(12, 4, image11, database);
+        insertImage(12, 5, image11, database);
+        insertImage(12, 6, image11, database);
+        insertImage(12, 7, image11, database);
+        insertImage(12, 8, image11, database);
+
+        insertImage(13, 1, image11, database);
+        insertImage(13, 2, image11, database);
+        insertImage(13, 3, image11, database);
+        insertImage(13, 4, image11, database);
+        insertImage(13, 5, image11, database);
+        insertImage(13, 6, image11, database);
+        insertImage(13, 7, image11, database);
+        insertImage(13, 8, image11, database);
+
+        insertImage(14, 1, image11, database);
+        insertImage(14, 2, image11, database);
+        insertImage(14, 3, image11, database);
+        insertImage(14, 4, image11, database);
+        insertImage(14, 5, image11, database);
+        insertImage(14, 6, image11, database);
+        insertImage(14, 7, image11, database);
+        insertImage(14, 8, image11, database);
     }
 
     public void insertImage(long mid,long sid,Bitmap bitmap,SQLiteDatabase database){
