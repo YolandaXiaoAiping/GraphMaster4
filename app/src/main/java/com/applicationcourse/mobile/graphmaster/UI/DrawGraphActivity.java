@@ -581,7 +581,7 @@ public class DrawGraphActivity  extends AppCompatActivity implements View.OnTouc
                         final AlertDialog.Builder alertadd = new AlertDialog.Builder(DrawGraphActivity.this);
                         LayoutInflater factory = LayoutInflater.from(DrawGraphActivity.this);
                         final View view = factory.inflate(R.layout.showpicture, null);
-                        ImageView image = (ImageView)view.findViewById(R.id.image1);
+                        ImageView image = (ImageView)view.findViewById(R.id.showImageDialog);
                         image.setImageBitmap(imagedata);
                         //image.setImageResource(R.drawable.first);
                         alertadd.setView(view);
